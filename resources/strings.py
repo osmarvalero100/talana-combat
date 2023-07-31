@@ -1,0 +1,1 @@
+FIGTH_DOES_NOT_EXIST_ERROR = "Figth does not exist"

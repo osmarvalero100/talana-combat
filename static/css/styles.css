@@ -1,0 +1,140 @@
+body {
+    background: #000;
+}
+h1 {
+    text-align: center;
+    color: #0c386b;
+    font-family: sans-serif;
+    font-weight: 800;
+    font-size: 64px;
+    text-transform: uppercase;
+    font-style: italic;
+    letter-spacing: 0.05em;
+}
+#winner {
+    display: none;
+}
+.container {
+    padding: 20px;
+    width: 800px;
+    margin: 0 auto;
+    margin-bottom: 40px;
+}
+.ring {
+    background-image: url('http://127.0.0.1:8000/static/img/ring.jpg');
+    background-size: cover;
+    min-width: 800px;
+    min-height: 500px;
+    position: relative;
+}
+.ring > * {
+    position: absolute;
+}
+.ring .player {
+    height: 356px;
+    width: auto;
+}
+.ring .player1 {
+    left: 0;
+    bottom: 0;
+}
+.ring .player2 {
+    right: 0;
+    bottom: 0;
+}
+.player-name {
+    font-weight: bold;
+}
+.energy {
+    background: #fff;
+    top: 5%;
+    padding: 10px;
+    width: 185px;
+}
+.qty{
+    background: #1f1fd9;
+    width: 120px;
+    height: 20px;
+    color: #fff;
+    padding: 5px;
+}
+.energy p {
+    margin: 5px 3px;
+}
+#energyPlayer2 {
+    right: 0;
+}
+.controls {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+.controls__player {
+    flex: 1;
+}
+.controls__player__buttons {
+    position: relative;
+}
+.controls__player:last-child{
+    text-align: right;
+}
+.controls__player__buttons {
+    text-align: center;
+    width: 85px;
+}
+.controls__player__buttons button {
+    cursor: pointer;
+}
+.controls__player__buttons button:first-child {
+    margin-bottom: 10px;
+}
+.controls__player:last-child {
+    position: relative;
+}
+.controls__player:last-child .controls__player__buttons {
+    position: absolute;
+    right: 0;
+}
+.arrow {
+    position: absolute;
+    height: 24px;
+    width: auto;
+}
+.controls__player__buttons:last-child .arrow-w {
+    top: -35px;
+    left: 33%;
+}
+.controls__player__buttons:last-child .arrow-a {
+    bottom: 0;
+    left: -25px;
+    transform: rotate(-90deg);
+}
+.controls__player__buttons:last-child .arrow-s {
+    left: 33%;
+    bottom: -35px;
+    transform: rotate(180deg);
+}
+.controls__player__buttons:last-child .arrow-d {
+    transform: rotate(90deg);
+    right: -25px;
+}
+.players-hits {
+    background: #fff;
+    margin-top: 60px;
+    text-align: center;
+    display: flow-root;
+}
+#winner {
+    text-align: center;
+    background: #fff;
+    padding: 20px;
+    margin-top: 60px;
+}
+#winner button {
+    font-weight: bold;
+    border: none;
+    height: 40px;
+    font-size: 20px;
+    width: 200px;
+    cursor: pointer;
+}

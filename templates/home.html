@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+
+{% import 'macros/control.html' as macro_control with context %}
+
+{% block content %}
+<div class="wrapper">
+    <div class="ring">
+        <img class="player player1" src="{{ url_for('static', path='/img/player1.png') }}">
+        
+        <div id="energyPlayer1" class="energy">
+            <p id="namePlayer1" class="player-name"></p>
+            <hr>
+            <p>Energía</p>
+            <div id="qty1" class="qty">6</div>
+        </div>
+        <img class="player player2" src="{{ url_for('static', path='/img/player2.png') }}">
+        <div id="energyPlayer2" class="energy">
+            <p id="namePlayer2" class="player-name"></p>
+            <hr>
+            <p>Energía</p>
+            <div id="qty2" class="qty">6</div>
+        </div>
+    </div>
+    <div class="controls">
+        {{ macro_control.render_player_control(1) }}
+        {{ macro_control.render_player_control(2) }}
+    </div>
+    <div id="winner" >
+        <div class="winner-player">
+            <h2 id="winnerPlayerName"></h2>
+            <button onclick="resertFight()">Volver a jugar</button>
+        </div>
+    </div>
+
+    <div class="players-hits">
+    <h3>Golpes de los personajes</h3>
+    <img class="hits" src="{{ url_for('static', path='/img/hits.png') }}">
+    </div>
+</div>
+{% endblock %}

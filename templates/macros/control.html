@@ -1,0 +1,15 @@
+{% macro render_player_control(player) %}
+<div id="playerControl{{ player }}" class="controls__player">
+    <div class="controls__player__buttons">
+        <button onclick="addMove('W', {{ player }})" class="btn">W</button>
+        <br>
+        <button onclick="addMove('A', {{ player }})" class="btn">A</button>
+        <button onclick="addMove('S', {{ player }})" class="btn">S</button>
+        <button onclick="addMove('D', {{ player }})" class="btn">D</button>
+        <img class="arrow arrow-w" src="{{ url_for('static', path='/img/arrow.svg') }}">
+        <img class="arrow arrow-a" src="{{ url_for('static', path='/img/arrow.svg') }}">
+        <img class="arrow arrow-s" src="{{ url_for('static', path='/img/arrow.svg') }}">
+        <img class="arrow arrow-d" src="{{ url_for('static', path='/img/arrow.svg') }}">
+    </div>
+</div>
+{% endmacro %}
